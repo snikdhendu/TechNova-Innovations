@@ -19,8 +19,8 @@ export function ModeToggle() {
           size="icon"
           className="ghost"
         >
-          <Sun className="h-[2.0rem] w-[2.0rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[2.0rem] w-[2.0rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun className="md:h-[2.0rem] md:w-[2.0rem] h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute md:h-[2.0rem] md:w-[2.0rem] h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>

@@ -38,8 +38,8 @@ const routeList: RouteProps[] = [
     label: "About",
   },
   {
-    href:"/contact",
-    label:"Contact"
+    href: "/contact",
+    label: "Contact"
   }
 ];
 
@@ -59,23 +59,23 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex justify-center items-center  gap-3"
             >
               {/* <LogoIcon /> */}
-              <img src="./red.svg" alt="" className=" w-6 h-6"/>
+              <img src="./red.svg" alt="" className=" w-6 h-6" />
               <h1>TechNova</h1>
             </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
-          <span className="flex justify-center items-center gap-4 md:hidden">
+          <span className="flex justify-center items-center gap-2 md:hidden">
 
 
-              <Link
-                to="/sign-in"
-                className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-2"
-              >
-                Sign in
-              </Link>
-       
+            <Link
+              to="/sign-in"
+              className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-2 py-2 text-center me-2 mb-2 mt-2"
+            >
+              Sign in
+            </Link>
 
+            <ModeToggle />
             <Sheet
               open={isOpen}
               onOpenChange={setIsOpen}
@@ -132,13 +132,13 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-4 justify-center items-center">
 
 
-              <Link
-                to="/sign-in"
-                className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-2"
-              >
-                Sign in
-              </Link>
-          
+            <Link
+              to="/sign-in"
+              className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-2"
+            >
+              Sign in
+            </Link>
+
 
 
             <ModeToggle />
