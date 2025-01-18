@@ -1,6 +1,7 @@
-import { Button } from "@/Components/ui/button";
+// import { Button } from "@/Components/ui/button";
 import { InteractiveGridPattern } from "@/Components/ui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 export const Error = () => {
   return (
@@ -26,12 +27,12 @@ export const Error = () => {
             The page you’re looking for doesn’t exist.
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button
-              onClick={() => (window.location.href = "/")}
+            <Link
+              to='/'
               className="w-full md:w-1/3"
             >
               Back to Home
-            </Button>
+            </Link>
 
           </div>
         </div>
