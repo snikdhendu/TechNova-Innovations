@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 enum PopularPlanType {
   NO = 0,
@@ -99,26 +100,44 @@ export const Pricing = () => {
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
-            className={
+            className={cn(
+              "transition-transform duration-300",
               pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
-                : ""
-            }
+                ? "bg-purple-100/20 border border-primary scale-105 shadow-xl shadow-primary/30"
+                : "shadow-lg"
+            )}
           >
             <CardHeader>
-              <CardTitle className="flex item-center justify-between">
-                {pricing.title}
+              <CardTitle className="flex items-center justify-between">
+                <span
+                  className={cn(
+                    pricing.popular === PopularPlanType.YES
+                      ? "text-primary font-extrabold text-2xl"
+                      : "text-lg"
+                  )}
+                >
+                  {pricing.title}
+                </span>
                 {pricing.popular === PopularPlanType.YES ? (
                   <Badge
                     variant="secondary"
-                    className="text-sm text-primary"
+                    className="text-sm bg-primary text-white px-3 py-1 rounded-full"
                   >
-                    Most popular
+                    Most Popular
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
+                <span
+                  className={cn(
+                    "text-3xl font-bold",
+                    pricing.popular === PopularPlanType.YES
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  ${pricing.price}
+                </span>
                 <span className="text-muted-foreground"> /month</span>
               </div>
 
@@ -126,7 +145,16 @@ export const Pricing = () => {
             </CardHeader>
 
             <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+              <Button
+                className={cn(
+                  "w-full",
+                  pricing.popular === PopularPlanType.YES
+                    ? "bg-primary text-white hover:bg-primary/80"
+                    : ""
+                )}
+              >
+                {pricing.buttonText}
+              </Button>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />
