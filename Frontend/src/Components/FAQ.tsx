@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -74,13 +75,13 @@ export const FAQ = () => {
 
       <h3 className="font-medium mt-4">
         Still have questions?{" "}
-        <a
+        <Link
           rel="noreferrer noopener"
-          href="#"
+          to='/contact'
           className="text-primary transition-all border-primary hover:border-b-2"
         >
           Contact us
-        </a>
+        </Link>
       </h3>
     </section>
   );

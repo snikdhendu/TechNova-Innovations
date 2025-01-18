@@ -9,10 +9,10 @@ import { InteractiveGridPattern } from "./ui/interactive-grid-pattern";
 export const Hero = () => {
   return (
     <>
-      <section className="container grid place-items-center py-20 md:py-32 gap-10 text-center w-screen font-space">
-        <div className="space-y-6 md:w-[1000px] w-full">
+      <section className="container grid place-items-center justify-center py-10 md:py-32 gap-10 text-center w-screen font-space">
+        <div className="space-y-6 md:w-[1000px] w-[330px]">
         <AnimatedGradientTextDemo />
-          <main className="text-3xl md:text-6xl font-bold">
+          <main className="text-2xl md:text-6xl font-bold md:w-full w-[330px]">
             <h1 className="inline">
               Welcome to{" "}
               <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">

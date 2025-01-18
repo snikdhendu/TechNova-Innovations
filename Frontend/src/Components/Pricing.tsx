@@ -76,8 +76,13 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="container py-24 sm:py-32 font-space"
+      className="container text-center py-24 sm:py-32 font-space"
     >
+      <div className="space-y-2">
+        <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm text-textmain mb-5">
+          ⚡| Pricing
+        </div>
+      </div>
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Get
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
