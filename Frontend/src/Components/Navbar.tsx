@@ -40,6 +40,10 @@ const routeList: RouteProps[] = [
   {
     href: "/contact",
     label: "Contact"
+  },
+  {
+    href: "/task",
+    label: "Task"
   }
 ];
 
