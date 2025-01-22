@@ -9,6 +9,35 @@
 
 
 
+.mirror-glare {
+  position: absolute; /* Ensures proper positioning relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the full width of the image */
+  height: 100%; /* Covers the full height of the image */
+  background: linear-gradient(
+    135deg, /* Diagonal gradient angle from bottom left to top right */
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background-size: 200% 200%; 
+  animation: mirror-glare 2.5s ease-in-out infinite;
+  pointer-events: none; 
+}
+
+/* Animation definition */
+@keyframes mirror-glare {
+  0% {
+    transform: translate(-100%, 100%); 
+  }
+  100% {
+    transform: translate(100%, -100%); 
+  }
+}
+
+
+
 
 
 .tag {
